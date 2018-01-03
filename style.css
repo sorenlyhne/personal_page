@@ -5,10 +5,9 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px auto 40px;
     grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "b b b b b b b b b b b b"
-        "m c c c c c c c c c c c"
-        "m f f f f f f f f f f f";
+        "h h h h h h h h h h h b"
+        "m c c c c c c c c c c b"
+        "m f f f f f f f f f f b";
 }
 
 .container > div {

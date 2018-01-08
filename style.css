@@ -22,6 +22,32 @@ a:active {
   color: #7D7462;
 }
 
+
+blockquote {
+  background: #D7BFA1;
+  border-radius: 6px;
+  margin: 1.5em 10px;
+  padding: 1.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #7D7462;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  color: #7D7462;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  float: right;
+}
+
 .container {
     height: 100%;
     display: grid;
@@ -43,32 +69,73 @@ a:active {
 .header {
     grid-area: h;
     background-color: #7D7462;
-    text-align: center;     
+    border: 5px solid #16161A;
+    position: relative;
+    text-align: center;
+    
 }
 
-.header > h1 {
-  font-size: 4.5em;
-  //height: 100px;
-  border: 5px solid #16161A;
-  margin: auto;  
+.header h1 {
+  font-size: 4vmax;
+  position: relative;
+  top: 47%;
+  margin: 0 auto; 
+  transform: translateY(-50%);
 }
 
+.content h1 {
+  text-align: center;
+  
+}
 
 .menu {
     grid-area: m;
     background-color: #4A352F;
     text-align: center; 
-    
 }
 
-.menu li {
-  display: inline;}
-
-.menu img {
-  //width: auto;
-  height: 70px;
-  margin: auto 30px; 
+.menu-item {
+  //border: 1px solid red;
+  padding: 10px;
+  height: 100%;
+  width: 18%;
+  display:inline-block;
+  //flex-direction: column;
+  //justify-content: center;
+  text-align: center;
+  
+  position: relative;  
+  
 }
+
+
+
+.menu-item img {  
+ 
+  max-width: 100%;
+  min-width: auto;
+  min-height: auto;
+  max-height: 80px;
+  
+  //border: 2px solid green;
+
+
+  /* position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%); */
+
+
+  
+
+  //padding-top: 20px;
+  //padding-bottom: 20px;
+  //display:none;  
+} 
+
+
+
+
 
 .banner {
     grid-area: b;

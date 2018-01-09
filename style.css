@@ -60,6 +60,22 @@ blockquote:after {
         /* "b b b b b b f f f f f f";         */
 }
 
+@media screen and (max-width: 1001px) {
+  .container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "b b b b b b b b b b b b"
+        "m m m m m m m m m m m m"
+        "c c c c c c c c c c c c"
+} 
+  
+}
+
 .container > div {
   font-size: 1em;
   color: #16161A;
@@ -92,19 +108,25 @@ blockquote:after {
     grid-area: m;
     background-color: #4A352F;
     text-align: center; 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;        
 }
 
 .menu-item {
-  //border: 1px solid red;
+  /* border: 3px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 10px;
-  height: 100%;
-  width: 18%;
-  display:inline-block;
-  //flex-direction: column;
-  //justify-content: center;
-  text-align: center;
-  
-  position: relative;  
+  /* height: 100%; */
+  /* width: 18%; */
+  /* display:inline-block; */
+  /* text-align: center; */
+  /* position: relative;   */
+
   
 }
 
@@ -117,7 +139,7 @@ blockquote:after {
   min-height: auto;
   max-height: 80px;
   
-  //border: 2px solid green;
+  /* //border: 2px solid green; */
 
 
   /* position: absolute;
@@ -128,9 +150,9 @@ blockquote:after {
 
   
 
-  //padding-top: 20px;
-  //padding-bottom: 20px;
-  //display:none;  
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+  /* display:none;   */
 } 
 
 

@@ -55,26 +55,25 @@ blockquote:after {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100px auto;
     grid-template-areas: 
-        "h h h h h h m m m m m m"
-        "b b b b b b c c c c c c"
+        "h h h h m m m m m m m m"
+        "b b b b c c c c c c c c"
         /* "b b b b b b f f f f f f";         */
 }
 
-@media screen and (max-width: 1001px) {
-  .container {
-    height: 100%;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px auto;
-    grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "b b b b b b b b b b b b"
-        "m m m m m m m m m m m m"
-        "c c c c c c c c c c c c"
-} 
-  
-}
+.banner img {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 53px;
+  /* bottom: 100px; */
+  /* overflow: hidden; */
+  object-fit: cover;
+  height: 92vh;
+
+  }
+
+
+
+
 
 .container > div {
   font-size: 1em;
@@ -88,15 +87,16 @@ blockquote:after {
     border: 5px solid #16161A;
     position: relative;
     text-align: center;
-    
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header h1 {
   font-size: 4vmax;
-  position: relative;
-  top: 47%;
-  margin: 0 auto; 
-  transform: translateY(-50%);
 }
 
 .content h1 {
@@ -111,7 +111,10 @@ blockquote:after {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-content: center;        
+    align-content: center;       
+    position: sticky;
+    top: 0;
+    z-index: 2; 
 }
 
 .menu-item {
@@ -169,7 +172,7 @@ blockquote:after {
     font-family: 'Work Sans', sans-serif;
     padding: 20px;
     border: 5px solid #16161A;
-
+    background-color: #fbfcef;
   }
 
 /* The actual timeline (the vertical ruler) */
@@ -207,7 +210,7 @@ blockquote:after {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: #F4F3DD;
+  background-color: #fbfcef;
   border: 4px solid #7D7462;
   top: 15px;
   border-radius: 50%;
@@ -265,8 +268,27 @@ blockquote:after {
   border-radius: 6px;
 }
 
+
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  font-family: 'Asar', serif;
+  
+}
+
+.footer {
+    grid-area: f;
+    background-color: #7D7462;
+    border: 5px solid #16161A;
+    
+    
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media all and (max-width: 600px) {
+@media all and (max-width: 1200px) {
   .timeline::after {
     left: 31px;
   }
@@ -297,22 +319,39 @@ blockquote:after {
   }
 }
 
-h1 {
-  font-family: 'Quicksand', sans-serif;
+@media screen and (max-width: 801px) {
+  .container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "b b b b b b b b b b b b"
+        "m m m m m m m m m m m m"
+        "c c c c c c c c c c c c";
+} 
+.banner img{
+position: static;
+height: 100%;
+object-fit: cover; 
 }
 
-h2 {
-  font-family: 'Asar', serif;
+.header{
+  position: static;
+  display: flex;
+  align-content: center;
+  justify-content: center;
   
 }
 
-
-
-.footer {
-    grid-area: f;
-    background-color: #7D7462;
-    border: 5px solid #16161A;
-    
-    
+.header h1{
+  font-size: 10vmax;
 }
 
+.menu{
+  position: static;
+}
+  
+}
